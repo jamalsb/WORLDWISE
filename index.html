@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="WORLDWISE helps people find practical next steps for everyday problems.">
+  <title>WORLDWISE | One place to find your next step</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="WORLDWISE home"><span class="brand-mark">W</span> WORLDWISE</a>
+    <nav><a href="#explore">Explore</a><a href="#how">How it works</a></nav>
+    <button class="outline-btn" id="installBtn" hidden>Install app</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse"></span> A practical starting point for everyone</div>
+      <h1>Every problem has a <span>next step.</span></h1>
+      <p class="hero-copy">Tell WORLDWISE what you’re trying to solve. Start with a clear plan, useful resources and a way forward.</p>
+      <form id="solverForm" class="solver">
+        <label for="problemInput">What would you like help with today?</label>
+        <textarea id="problemInput" maxlength="600" placeholder="Example: I want to learn a skill and find beginner-friendly work..." required></textarea>
+        <div class="solver-bottom"><small>Don’t include passwords, private IDs or sensitive personal details.</small><button class="primary-btn" type="submit">Find my next step <span>→</span></button></div>
+      </form>
+      <p class="demo-note">Prototype mode: this first version creates a starter plan on your device. AI answers and verified services will be added in later phases.</p>
+    </section>
+
+    <section id="resultSection" class="result-card" hidden aria-live="polite">
+      <div class="result-heading"><div><div class="eyebrow">YOUR STARTER PLAN</div><h2 id="resultTitle">A practical first step</h2></div><button class="text-btn" id="closeResult">Close</button></div>
+      <ol id="resultSteps"></ol>
+      <p class="notice">For urgent medical, safety or legal situations, contact a qualified local professional or emergency service. WORLDWISE is not a substitute for professional help.</p>
+      <button class="outline-btn" id="savePlan">Save this plan</button>
+    </section>
+
+    <section id="explore" class="section">
+      <div class="section-heading"><div><div class="eyebrow">EXPLORE</div><h2>Where do you need a hand?</h2></div><p>Start with a topic. More areas will be added as the platform grows.</p></div>
+      <div class="category-grid">
+        <button class="category" data-topic="Education"><span class="category-icon">📚</span><strong>Education</strong><small>Learning, study plans and explanations</small></button>
+        <button class="category" data-topic="Skills & work"><span class="category-icon">🧭</span><strong>Skills & work</strong><small>Career paths and legitimate opportunities</small></button>
+        <button class="category" data-topic="Everyday tasks"><span class="category-icon">🛠️</span><strong>Everyday tasks</strong><small>Technology, writing and practical how-tos</small></button>
+        <button class="category" data-topic="Community support"><span class="category-icon">🤝</span><strong>Community support</strong><small>Find ways to give or receive help</small></button>
+        <button class="category" data-topic="Money basics"><span class="category-icon">🌱</span><strong>Money basics</strong><small>Budgeting and financial education</small></button>
+        <button class="category" data-topic="Environment"><span class="category-icon">🌍</span><strong>Environment</strong><small>Waste, energy and local action</small></button>
+      </div>
+    </section>
+
+    <section id="how" class="how-section">
+      <div class="eyebrow">OUR PROMISE</div><h2>Useful first. Bigger over time.</h2>
+      <div class="how-grid">
+        <div><b>01</b><h3>Explain the problem</h3><p>Share only the details needed to understand what you’re facing.</p></div>
+        <div><b>02</b><h3>Get clear next steps</h3><p>Turn a confusing situation into small, practical actions.</p></div>
+        <div><b>03</b><h3>Find trusted support</h3><p>We’ll add reviewed resources and verified local services as we grow.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">W</span> WORLDWISE</a><span>Built to make helpful action easier.</span><span>© <span id="year"></span> WORLDWISE</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
